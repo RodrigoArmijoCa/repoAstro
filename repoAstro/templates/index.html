@@ -5,25 +5,29 @@
 {% block contenido %}
 
     <div class="table-responsive">
-        <table class="table table-primary">
+        <table class="table table-light">
             <thead>
                 <tr>
-                    <th scope="col">Column 1</th>
-                    <th scope="col">Column 2</th>
-                    <th scope="col">Column 3</th>
+                    <th scope="col">Dataset</th>
+                    <th scope="col">Problema de optimización</th>
+                    <th scope="col">Algoritmo de optimización</th>
+                    <th scope="col">Cantidad de iteraciones</th>
+                    <th scope="col">Solución inicial</th>
+                    <th scope="col">Solución final</th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="">
-                    <td scope="row">R1C1</td>
-                    <td>R1C2</td>
-                    <td>R1C3</td>
+                {% for solucion in soluciones %}
+                <tr>
+                    <td><img src={{solucion.imagen.url}} width="300" height="300"></td>
+                    <td>{{solucion.id_dataset.nombre}}</td>
+                    <td>{{solucion.id_prob_opti.nombre}}</td>
+                    <td>{{solucion.id_algo_opti.nombre}}</td>
+                    <td>{{solucion.cant_ite}}</td>
+                    <td>{{solucion.solucion_inicial}}</td>
+                    <td>{{solucion.solucion_final}}</td>
                 </tr>
-                <tr class="">
-                    <td scope="row">Item</td>
-                    <td>Item</td>
-                    <td>Item</td>
-                </tr>
+                {% endfor %}
             </tbody>
         </table>
     </div>
