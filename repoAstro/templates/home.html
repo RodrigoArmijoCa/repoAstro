@@ -1,5 +1,42 @@
 {% extends "base.html" %}
 
-{% block titulo %} Bienvenido {% endblock %} 
+{% block titulo %} Bienvenidos a RepoAstro {% endblock %} 
 
-{% block contenido %}  {% endblock %} 
+{% block contenido %}
+
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+          <h1 class="display-5 fw-bold">Bienvenidos al proyecto repositorio Astronomía</h1>
+          <p class="col-md-8 fs-4"> Aqui podras buscar y compartir imagenes reconstruidas de distintos astros</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+                <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+                <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <img src="https://github.com/RodrigoArmijoCa/repoAstro/blob/master/repoAstro/images/black_hole.jpg?raw=true" class="w-100 d-block" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://github.com/RodrigoArmijoCa/repoAstro/blob/master/repoAstro/images/astroinformatica.jpg?raw=true" class="w-100 d-block" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://github.com/RodrigoArmijoCa/repoAstro/blob/master/repoAstro/images/departamento.jpg?raw=true" class="w-100 d-block" alt="Third slide">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div> 
+{% endblock %} 
